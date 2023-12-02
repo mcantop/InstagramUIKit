@@ -12,6 +12,14 @@
 		520B409C2B19168A0008E91A /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520B409B2B19168A0008E91A /* LoginController.swift */; };
 		520B40A12B19168B0008E91A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 520B40A02B19168B0008E91A /* Assets.xcassets */; };
 		520B40A42B19168B0008E91A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 520B40A22B19168B0008E91A /* LaunchScreen.storyboard */; };
+		524D451C2B19D7C500C5249D /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524D451B2B19D7C500C5249D /* UIFont+Extensions.swift */; };
+		524D451E2B19DCDF00C5249D /* GradientBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524D451D2B19DCDF00C5249D /* GradientBackground.swift */; };
+		524D45202B1A527800C5249D /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524D451F2B1A527800C5249D /* UIColor+Extensions.swift */; };
+		524D45252B1A5BB800C5249D /* IGLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524D45242B1A5BB800C5249D /* IGLogoView.swift */; };
+		524D45272B1A604300C5249D /* IGTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524D45262B1A604300C5249D /* IGTextField.swift */; };
+		52A4417E2B1B5415008DE252 /* IGButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A4417D2B1B5415008DE252 /* IGButton.swift */; };
+		52A441802B1B797D008DE252 /* IGFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A4417F2B1B797D008DE252 /* IGFooterView.swift */; };
+		52A441822B1B8055008DE252 /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A441812B1B8055008DE252 /* SignUpController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +30,14 @@
 		520B40A02B19168B0008E91A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		520B40A32B19168B0008E91A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		520B40A52B19168B0008E91A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		524D451B2B19D7C500C5249D /* UIFont+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
+		524D451D2B19DCDF00C5249D /* GradientBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBackground.swift; sourceTree = "<group>"; };
+		524D451F2B1A527800C5249D /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		524D45242B1A5BB800C5249D /* IGLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGLogoView.swift; sourceTree = "<group>"; };
+		524D45262B1A604300C5249D /* IGTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGTextField.swift; sourceTree = "<group>"; };
+		52A4417D2B1B5415008DE252 /* IGButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGButton.swift; sourceTree = "<group>"; };
+		52A4417F2B1B797D008DE252 /* IGFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGFooterView.swift; sourceTree = "<group>"; };
+		52A441812B1B8055008DE252 /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +73,7 @@
 				524D45152B19261C00C5249D /* App */,
 				524D45182B19264F00C5249D /* Core */,
 				524D45172B19264B00C5249D /* Model */,
+				524D45232B1A5B9B00C5249D /* Components */,
 				524D45192B19265200C5249D /* Utils */,
 				520B40A22B19168B0008E91A /* LaunchScreen.storyboard */,
 				520B40A52B19168B0008E91A /* Info.plist */,
@@ -92,6 +109,9 @@
 		524D45192B19265200C5249D /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				524D451B2B19D7C500C5249D /* UIFont+Extensions.swift */,
+				524D451F2B1A527800C5249D /* UIColor+Extensions.swift */,
+				524D451D2B19DCDF00C5249D /* GradientBackground.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -100,8 +120,20 @@
 			isa = PBXGroup;
 			children = (
 				520B409B2B19168A0008E91A /* LoginController.swift */,
+				52A441812B1B8055008DE252 /* SignUpController.swift */,
 			);
 			path = Auth;
+			sourceTree = "<group>";
+		};
+		524D45232B1A5B9B00C5249D /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				524D45242B1A5BB800C5249D /* IGLogoView.swift */,
+				524D45262B1A604300C5249D /* IGTextField.swift */,
+				52A4417D2B1B5415008DE252 /* IGButton.swift */,
+				52A4417F2B1B797D008DE252 /* IGFooterView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,8 +206,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				524D451E2B19DCDF00C5249D /* GradientBackground.swift in Sources */,
+				52A441802B1B797D008DE252 /* IGFooterView.swift in Sources */,
+				524D45202B1A527800C5249D /* UIColor+Extensions.swift in Sources */,
+				52A4417E2B1B5415008DE252 /* IGButton.swift in Sources */,
 				520B409C2B19168A0008E91A /* LoginController.swift in Sources */,
 				520B40982B19168A0008E91A /* AppDelegate.swift in Sources */,
+				524D45272B1A604300C5249D /* IGTextField.swift in Sources */,
+				524D45252B1A5BB800C5249D /* IGLogoView.swift in Sources */,
+				524D451C2B19D7C500C5249D /* UIFont+Extensions.swift in Sources */,
+				52A441822B1B8055008DE252 /* SignUpController.swift in Sources */,
 				520B409A2B19168A0008E91A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
