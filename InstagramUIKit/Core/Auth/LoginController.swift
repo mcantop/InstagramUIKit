@@ -33,12 +33,11 @@ final class LoginController: UIViewController {
     }()
     
     private lazy var emailTextField: IGTextField = {
-        .init("Email")
+        return .init("Email")
     }()
     
     private lazy var passwordTextField: IGTextField = {
-        .init("Password", isSecure: true)
-
+        return .init("Password", isSecure: true)
     }()
     
     private lazy var loginButton: IGButton = {
@@ -46,7 +45,7 @@ final class LoginController: UIViewController {
     }()
     
     private lazy var footerView: IGFooterView = {
-        .init(type: .login)
+        return .init(type: .login)
     }()
 
     // MARK: - Lifecycle
@@ -60,9 +59,9 @@ final class LoginController: UIViewController {
     
     // MARK: - Selectors
     @objc private func presentSignUp() {
-        let signUpViewController = SignUpController()
-        signUpViewController.modalPresentationStyle = .fullScreen
-        navigationController?.present(signUpViewController, animated: true)
+        let signUpNavigationController = UINavigationController(rootViewController: SignUpController())
+        signUpNavigationController.modalPresentationStyle = .fullScreen
+        navigationController?.present(signUpNavigationController, animated: true)
     }
     
     @objc private func textFieldDidChange(_ textField: UITextField) {

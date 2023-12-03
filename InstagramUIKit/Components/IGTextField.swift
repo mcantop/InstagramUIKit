@@ -53,10 +53,16 @@ final class IGTextField: UIView {
         
         setupUI()
         setupConstraints()
+        setupDoneAccessoryButton()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: - Selectors
+    @objc private func dismissKeyboard() {
+        textField.resignFirstResponder()
     }
 }
 
@@ -78,6 +84,15 @@ private extension IGTextField {
             
             heightAnchor.constraint(equalToConstant: Constants.textFieldHeight)
         ])
+    }
+    
+    func setupDoneAccessoryButton() {
+        let bar = UIToolbar()
+        let spacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let reset = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(dismissKeyboard))
+        bar.items = [spacer, reset]
+        bar.sizeToFit()
+        textField.inputAccessoryView = bar
     }
 }
 

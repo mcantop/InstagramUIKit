@@ -25,6 +25,12 @@
 		52A441A12B1B9844008DE252 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 52A441A02B1B9844008DE252 /* FirebaseFirestoreSwift */; };
 		52A441AF2B1B9844008DE252 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 52A441AE2B1B9844008DE252 /* FirebaseStorage */; };
 		52A441B32B1B99BE008DE252 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52A441B22B1B99BE008DE252 /* GoogleService-Info.plist */; };
+		52A441B52B1BD61A008DE252 /* SignUpImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A441B42B1BD61A008DE252 /* SignUpImageController.swift */; };
+		52A441B82B1C9EFF008DE252 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A441B72B1C9EFF008DE252 /* AuthService.swift */; };
+		52A441BA2B1C9FD2008DE252 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A441B92B1C9FD2008DE252 /* UserModel.swift */; };
+		52A441BC2B1CA8CE008DE252 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A441BB2B1CA8CE008DE252 /* UserService.swift */; };
+		52A441BE2B1CA932008DE252 /* FirebaseCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A441BD2B1CA932008DE252 /* FirebaseCollection.swift */; };
+		52A441C02B1CAD69008DE252 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A441BF2B1CAD69008DE252 /* ImageService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +50,12 @@
 		52A4417F2B1B797D008DE252 /* IGFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGFooterView.swift; sourceTree = "<group>"; };
 		52A441812B1B8055008DE252 /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
 		52A441B22B1B99BE008DE252 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		52A441B42B1BD61A008DE252 /* SignUpImageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpImageController.swift; sourceTree = "<group>"; };
+		52A441B72B1C9EFF008DE252 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		52A441B92B1C9FD2008DE252 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		52A441BB2B1CA8CE008DE252 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		52A441BD2B1CA932008DE252 /* FirebaseCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseCollection.swift; sourceTree = "<group>"; };
+		52A441BF2B1CAD69008DE252 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +95,7 @@
 				524D45152B19261C00C5249D /* App */,
 				524D45182B19264F00C5249D /* Core */,
 				524D45172B19264B00C5249D /* Model */,
+				52A441B62B1C9E8A008DE252 /* Services */,
 				524D45232B1A5B9B00C5249D /* Components */,
 				524D45192B19265200C5249D /* Utils */,
 				520B40A22B19168B0008E91A /* LaunchScreen.storyboard */,
@@ -105,6 +118,7 @@
 		524D45172B19264B00C5249D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				52A441B92B1C9FD2008DE252 /* UserModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -123,6 +137,7 @@
 				524D451B2B19D7C500C5249D /* UIFont+Extensions.swift */,
 				524D451F2B1A527800C5249D /* UIColor+Extensions.swift */,
 				524D451D2B19DCDF00C5249D /* GradientBackground.swift */,
+				52A441BD2B1CA932008DE252 /* FirebaseCollection.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -132,6 +147,7 @@
 			children = (
 				520B409B2B19168A0008E91A /* LoginController.swift */,
 				52A441812B1B8055008DE252 /* SignUpController.swift */,
+				52A441B42B1BD61A008DE252 /* SignUpImageController.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -145,6 +161,16 @@
 				52A4417F2B1B797D008DE252 /* IGFooterView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		52A441B62B1C9E8A008DE252 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				52A441B72B1C9EFF008DE252 /* AuthService.swift */,
+				52A441BB2B1CA8CE008DE252 /* UserService.swift */,
+				52A441BF2B1CAD69008DE252 /* ImageService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,14 +253,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52A441BE2B1CA932008DE252 /* FirebaseCollection.swift in Sources */,
 				524D451E2B19DCDF00C5249D /* GradientBackground.swift in Sources */,
 				52A441802B1B797D008DE252 /* IGFooterView.swift in Sources */,
 				524D45202B1A527800C5249D /* UIColor+Extensions.swift in Sources */,
 				52A4417E2B1B5415008DE252 /* IGButton.swift in Sources */,
 				520B409C2B19168A0008E91A /* LoginController.swift in Sources */,
+				52A441B52B1BD61A008DE252 /* SignUpImageController.swift in Sources */,
+				52A441B82B1C9EFF008DE252 /* AuthService.swift in Sources */,
 				520B40982B19168A0008E91A /* AppDelegate.swift in Sources */,
+				52A441BA2B1C9FD2008DE252 /* UserModel.swift in Sources */,
 				524D45272B1A604300C5249D /* IGTextField.swift in Sources */,
 				524D45252B1A5BB800C5249D /* IGLogoView.swift in Sources */,
+				52A441BC2B1CA8CE008DE252 /* UserService.swift in Sources */,
+				52A441C02B1CAD69008DE252 /* ImageService.swift in Sources */,
 				524D451C2B19D7C500C5249D /* UIFont+Extensions.swift in Sources */,
 				52A441822B1B8055008DE252 /* SignUpController.swift in Sources */,
 				520B409A2B19168A0008E91A /* SceneDelegate.swift in Sources */,

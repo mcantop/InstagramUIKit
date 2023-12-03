@@ -49,7 +49,7 @@ final class IGFooterView: UIView {
     private lazy var blurEffectView: UIVisualEffectView = {
         let blurEffect = UIBlurEffect(style: .systemMaterialLight)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
-        blurEffectView.alpha = 0.15
+        blurEffectView.alpha = 0.07
         blurEffectView.frame = bounds
         blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         return blurEffectView

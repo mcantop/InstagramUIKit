@@ -51,7 +51,7 @@ final class SignUpController: UIViewController {
     }()
     
     private lazy var signUpButton: IGButton = {
-        return .init("Sign up")
+        return .init("Next")
     }()
     
     private lazy var footerView: IGFooterView = {
@@ -81,8 +81,17 @@ final class SignUpController: UIViewController {
         signUpButton.isEnabled = isEnabled
     }
     
-    @objc private func handleSignUp() {
-        print("[DEBUG] Handle sign up..")
+    @objc private func navigateToUploadPicture() {
+        guard let name = usernameTextField.textField.text,
+              let email = emailTextField.textField.text,
+              let password = passwordTextField.textField.text else { return }
+        
+        let controller = SignUpImageController(
+            name: name,
+            email: email,
+            password: password
+        )
+        navigationController?.pushViewController(controller, animated: true)
     }
 }
 
@@ -116,12 +125,12 @@ private extension SignUpController {
         passwordTextField.textField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
         confirmPasswordTextField.textField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
         
-        signUpButton.button.addTarget(self, action: #selector(handleSignUp), for: .touchUpInside)
+        signUpButton.button.addTarget(self, action: #selector(navigateToUploadPicture), for: .touchUpInside)
         
         footerView.button.addTarget(self, action: #selector(dismissSignUp), for: .touchUpInside)
     }
 }
 
 #Preview {
-    SignUpController()
+    UINavigationController(rootViewController: SignUpController())
 }
