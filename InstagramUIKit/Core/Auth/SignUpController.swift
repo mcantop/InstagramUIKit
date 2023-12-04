@@ -10,6 +10,8 @@ import UIKit
 final class SignUpController: UIViewController {
 
     // MARK: - Properties
+    weak var delegate: AuthDelegate?
+    
     private lazy var backgroundGradient: CAGradientLayer = {
         return .gradient(in: view.bounds)
     }()
@@ -91,6 +93,8 @@ final class SignUpController: UIViewController {
             email: email,
             password: password
         )
+        controller.delegate = delegate
+        
         navigationController?.pushViewController(controller, animated: true)
     }
 }

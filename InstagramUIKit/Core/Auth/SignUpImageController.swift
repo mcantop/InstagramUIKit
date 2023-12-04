@@ -10,6 +10,8 @@ import UIKit
 final class SignUpImageController: UIViewController {
     
     // MARK: - Properties
+    weak var delegate: AuthDelegate?
+    
     private let name: String
     private let email: String
     private let password: String
@@ -119,7 +121,13 @@ final class SignUpImageController: UIViewController {
     
     @objc private func handleSignUp() {
         Task {
-            await AuthService.signUp(email: email, password: password, name: name, profileImage: selectedImage)
+            do {
+                try await AuthService.signUp(email: email, password: password, name: name, profileImage: selectedImage)
+                
+                delegate?.handleLoginFlow()
+            } catch {
+                presentErrorAlert(message: error.localizedDescription)
+            }
         }
     }
 }

@@ -7,9 +7,15 @@
 
 import UIKit
 
+protocol AuthDelegate: AnyObject {
+    func handleLoginFlow()
+}
+
 final class LoginController: UIViewController {
     
     // MARK: - Properties
+    weak var delegate: AuthDelegate?
+    
     private lazy var backgroundGradient: CAGradientLayer = {
         return .gradient(in: view.bounds)
     }()
@@ -59,7 +65,10 @@ final class LoginController: UIViewController {
     
     // MARK: - Selectors
     @objc private func presentSignUp() {
-        let signUpNavigationController = UINavigationController(rootViewController: SignUpController())
+        let signUpController = SignUpController()
+        signUpController.delegate = delegate
+        
+        let signUpNavigationController = UINavigationController(rootViewController: signUpController)
         signUpNavigationController.modalPresentationStyle = .fullScreen
         navigationController?.present(signUpNavigationController, animated: true)
     }
@@ -69,7 +78,18 @@ final class LoginController: UIViewController {
     }
     
     @objc private func handleLogin() {
-        print("[DEBUG] Handle login..")
+        guard let email = emailTextField.textField.text,
+              let password = passwordTextField.textField.text else { return }
+        
+        Task {
+            do {
+                try await AuthService.login(email: email, password: password)
+                
+                delegate?.handleLoginFlow()
+            } catch {
+                presentErrorAlert(message: error.localizedDescription)
+            }
+        }
     }
 }
 

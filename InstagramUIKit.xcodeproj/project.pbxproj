@@ -31,6 +31,14 @@
 		52A441BC2B1CA8CE008DE252 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A441BB2B1CA8CE008DE252 /* UserService.swift */; };
 		52A441BE2B1CA932008DE252 /* FirebaseCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A441BD2B1CA932008DE252 /* FirebaseCollection.swift */; };
 		52A441C02B1CAD69008DE252 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A441BF2B1CAD69008DE252 /* ImageService.swift */; };
+		52A441C32B1CC88C008DE252 /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A441C22B1CC88C008DE252 /* MainTabController.swift */; };
+		52A441CA2B1CCA7A008DE252 /* FeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A441C92B1CCA7A008DE252 /* FeedController.swift */; };
+		52A441CC2B1CCAB6008DE252 /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A441CB2B1CCAB6008DE252 /* SearchController.swift */; };
+		52A441CE2B1CCAD8008DE252 /* UploadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A441CD2B1CCAD8008DE252 /* UploadController.swift */; };
+		52A441D02B1CCAEA008DE252 /* NotificationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A441CF2B1CCAEA008DE252 /* NotificationsController.swift */; };
+		52A441D22B1CCB01008DE252 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A441D12B1CCB01008DE252 /* ProfileController.swift */; };
+		52E9D0BE2B1E889E009A6E1C /* MainTabType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E9D0BD2B1E889E009A6E1C /* MainTabType.swift */; };
+		52E9D0C02B1E897A009A6E1C /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E9D0BF2B1E897A009A6E1C /* UIViewController+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +64,14 @@
 		52A441BB2B1CA8CE008DE252 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		52A441BD2B1CA932008DE252 /* FirebaseCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseCollection.swift; sourceTree = "<group>"; };
 		52A441BF2B1CAD69008DE252 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
+		52A441C22B1CC88C008DE252 /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
+		52A441C92B1CCA7A008DE252 /* FeedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedController.swift; sourceTree = "<group>"; };
+		52A441CB2B1CCAB6008DE252 /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
+		52A441CD2B1CCAD8008DE252 /* UploadController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadController.swift; sourceTree = "<group>"; };
+		52A441CF2B1CCAEA008DE252 /* NotificationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsController.swift; sourceTree = "<group>"; };
+		52A441D12B1CCB01008DE252 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		52E9D0BD2B1E889E009A6E1C /* MainTabType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabType.swift; sourceTree = "<group>"; };
+		52E9D0BF2B1E897A009A6E1C /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,7 +142,13 @@
 		524D45182B19264F00C5249D /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				52A441C12B1CC874008DE252 /* MainTab */,
 				524D451A2B19266000C5249D /* Auth */,
+				52A441C42B1CCA08008DE252 /* Feed */,
+				52A441C52B1CCA30008DE252 /* Search */,
+				52A441C62B1CCA3B008DE252 /* Upload */,
+				52A441C72B1CCA51008DE252 /* Notifications */,
+				52A441C82B1CCA5D008DE252 /* Profile */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -136,6 +158,7 @@
 			children = (
 				524D451B2B19D7C500C5249D /* UIFont+Extensions.swift */,
 				524D451F2B1A527800C5249D /* UIColor+Extensions.swift */,
+				52E9D0BF2B1E897A009A6E1C /* UIViewController+Extensions.swift */,
 				524D451D2B19DCDF00C5249D /* GradientBackground.swift */,
 				52A441BD2B1CA932008DE252 /* FirebaseCollection.swift */,
 			);
@@ -171,6 +194,55 @@
 				52A441BF2B1CAD69008DE252 /* ImageService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		52A441C12B1CC874008DE252 /* MainTab */ = {
+			isa = PBXGroup;
+			children = (
+				52A441C22B1CC88C008DE252 /* MainTabController.swift */,
+				52E9D0BD2B1E889E009A6E1C /* MainTabType.swift */,
+			);
+			path = MainTab;
+			sourceTree = "<group>";
+		};
+		52A441C42B1CCA08008DE252 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				52A441C92B1CCA7A008DE252 /* FeedController.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		52A441C52B1CCA30008DE252 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				52A441CB2B1CCAB6008DE252 /* SearchController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		52A441C62B1CCA3B008DE252 /* Upload */ = {
+			isa = PBXGroup;
+			children = (
+				52A441CD2B1CCAD8008DE252 /* UploadController.swift */,
+			);
+			path = Upload;
+			sourceTree = "<group>";
+		};
+		52A441C72B1CCA51008DE252 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				52A441CF2B1CCAEA008DE252 /* NotificationsController.swift */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		52A441C82B1CCA5D008DE252 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				52A441D12B1CCB01008DE252 /* ProfileController.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,18 +327,26 @@
 			files = (
 				52A441BE2B1CA932008DE252 /* FirebaseCollection.swift in Sources */,
 				524D451E2B19DCDF00C5249D /* GradientBackground.swift in Sources */,
+				52A441CE2B1CCAD8008DE252 /* UploadController.swift in Sources */,
 				52A441802B1B797D008DE252 /* IGFooterView.swift in Sources */,
 				524D45202B1A527800C5249D /* UIColor+Extensions.swift in Sources */,
 				52A4417E2B1B5415008DE252 /* IGButton.swift in Sources */,
 				520B409C2B19168A0008E91A /* LoginController.swift in Sources */,
 				52A441B52B1BD61A008DE252 /* SignUpImageController.swift in Sources */,
+				52E9D0BE2B1E889E009A6E1C /* MainTabType.swift in Sources */,
+				52A441D02B1CCAEA008DE252 /* NotificationsController.swift in Sources */,
+				52A441D22B1CCB01008DE252 /* ProfileController.swift in Sources */,
 				52A441B82B1C9EFF008DE252 /* AuthService.swift in Sources */,
 				520B40982B19168A0008E91A /* AppDelegate.swift in Sources */,
 				52A441BA2B1C9FD2008DE252 /* UserModel.swift in Sources */,
+				52A441CA2B1CCA7A008DE252 /* FeedController.swift in Sources */,
+				52A441CC2B1CCAB6008DE252 /* SearchController.swift in Sources */,
 				524D45272B1A604300C5249D /* IGTextField.swift in Sources */,
+				52E9D0C02B1E897A009A6E1C /* UIViewController+Extensions.swift in Sources */,
 				524D45252B1A5BB800C5249D /* IGLogoView.swift in Sources */,
 				52A441BC2B1CA8CE008DE252 /* UserService.swift in Sources */,
 				52A441C02B1CAD69008DE252 /* ImageService.swift in Sources */,
+				52A441C32B1CC88C008DE252 /* MainTabController.swift in Sources */,
 				524D451C2B19D7C500C5249D /* UIFont+Extensions.swift in Sources */,
 				52A441822B1B8055008DE252 /* SignUpController.swift in Sources */,
 				520B409A2B19168A0008E91A /* SceneDelegate.swift in Sources */,

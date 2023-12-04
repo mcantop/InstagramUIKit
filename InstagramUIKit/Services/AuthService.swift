@@ -10,7 +10,7 @@ import FirebaseAuth
 
 struct AuthService {
     
-    static func signUp(email: String, password: String, name: String, profileImage: UIImage? = nil) async {
+    static func signUp(email: String, password: String, name: String, profileImage: UIImage? = nil) async throws {
         do {
             // Create user on back end
             let result = try await Auth.auth().createUser(withEmail: email, password: password)
@@ -32,15 +32,23 @@ struct AuthService {
             )
             UserService.uploadData(user)
         } catch {
-            print("[DEBUG] Error signing up - \(error.localizedDescription)")
+            throw error
         }
     }
     
-    static func login() {
-        
+    static func login(email: String, password: String) async throws {
+        do {
+            try await Auth.auth().signIn(withEmail: email, password: password)
+        } catch {
+            throw error
+        }
     }
     
-    static func signOut() {
-        
+    static func logout() throws {
+        do {
+            try Auth.auth().signOut()
+        } catch {
+            throw error
+        }
     }
 }
